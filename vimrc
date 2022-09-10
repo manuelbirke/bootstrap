@@ -75,6 +75,10 @@ silent execute '!mkdir -p $HOME/.vimbackup//'
 :map <F2> :mksession! ~/vim_session <cr>
 :map <F3> :source ~/vim_session <cr>
 
-" " Highlight line > 80 columns 
-" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-" match OverLength /\%81v.\+/
+" " Highlight line > 120 columns 
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%120v.\+/
+
+" Clang Format plugin
+map <C-K> :pyf <path-to-this-file>/clang-format.py <cr>
+imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py <cr>
